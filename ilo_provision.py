@@ -366,12 +366,40 @@ def plan_security_state(ilo, spec, args):
     return Item("ilo", spec["name"], CHANGE, ["SecurityState: %s -> %s (iLO reset needed)" % (cur, spec["value"])], run, late=True)
 
 
+def plan_ldap_groups(ilo, spec):
+    """Make sure the directory groups exist. Existing mappings (and the privileges iLO stores for them as
+    custom roles) are never replaced - only missing groups are appended."""
+    uri = ilo.resolve("account_service")
+    cur = dig(ilo.get(uri) or {}, "LDAP", "RemoteRoleMapping")
+    if cur is None:
+        return Item("ilo", spec["name"], UNRESOLVED, ["LDAP.RemoteRoleMapping not readable"], unresolved=1)
+    have = {str(m.get("RemoteGroup", "")).lower() for m in cur}
+    missing = []
+    for g in spec["groups"]:
+        cn = re.match(r"(?i)cn=([^,]+)", g["dn"])
+        names = {g["dn"].lower()} | ({cn.group(1).lower()} if cn else set())
+        if not (names & have):
+            missing.append(g)
+    lines = ["%d of %d groups present; their privileges are NOT compared (stored by iLO as custom roles) - verify in the iLO UI"
+             % (len(spec["groups"]) - len(missing), len(spec["groups"]))]
+    if not missing:
+        return Item("ilo", spec["name"], OK, lines)
+    lines += ["add %s -> %s" % (g["dn"], g["role"]) for g in missing]
+    new = list(cur) + [{"LocalRole": g["role"], "RemoteGroup": g["dn"]} for g in missing]
+
+    def run():
+        check(ilo.c.patch(uri, {"LDAP": {"RemoteRoleMapping": new}}), "directory groups")
+    return Item("ilo", spec["name"], CHANGE, lines, run)
+
+
 def plan_ilo(ilo, cfg, args, params):
     items = []
     for spec in cfg["ilo"]:
         t = spec.get("type")
         if t == "timezone":
             items.append(plan_timezone(ilo, spec))
+        elif t == "ldap_groups":
+            items.append(plan_ldap_groups(ilo, spec))
         elif t == "accounts":
             items.append(plan_account(ilo, spec))
         elif t == "license":
@@ -451,7 +479,7 @@ def plan_bios(ilo, cfg):
 
     for rule in cfg.get("bios_rules", []):
         rx = re.compile(rule["regex"])
-        names = sorted(n for n in set(cur) | set(reg) if rx.search(n))
+        names = sorted(n for n in cur if rx.search(n))     # only attributes this system actually exposes
         if not names:
             lines.append("? rule '%s': no matching attributes on this BIOS" % rule["label"])
             unresolved += 1
@@ -615,7 +643,8 @@ def plan_firmware(ilo, cfg, args):
             items.append(Item("firmware", comp["name"], SKIP, ["not present in firmware inventory (component not installed?)"]))
             continue
         stale = [i for i in hits if not version_ok(i["version"], comp["target"])]
-        lines = ["%s: %s%s" % (i["name"][:50], i["version"], "" if i not in stale else "  -> needs %s" % comp["target"]) for i in hits]
+        raw = ["%s: %s%s" % (i["name"][:50], i["version"], "" if i not in stale else "  -> needs %s" % comp["target"]) for i in hits]
+        lines = ["%s%s" % (l, "  (x%d)" % raw.count(l) if raw.count(l) > 1 else "") for l in dict.fromkeys(raw)]
         if not stale:
             items.append(Item("firmware", comp["name"], OK, lines)); continue
         cand = [p for p in pkgs if groups_match(comp["package_match"], p["text"])]
@@ -707,6 +736,7 @@ def parse_args(argv=None):
     p.add_argument("--ilo-static-ip"); p.add_argument("--ilo-netmask"); p.add_argument("--ilo-gateway")
     p.add_argument("--show-inventory", action="store_true", help="print the firmware inventory (to tune matching in the config)")
     p.add_argument("--dump-bios", metavar="FILE", help="write current BIOS attributes + registry to FILE and exit")
+    p.add_argument("--get", metavar="URI", action="append", help="read-only: print a Redfish resource (repeatable), then exit")
     p.add_argument("-v", "--verbose", action="store_true", help="also list compliant items")
     a = p.parse_args(argv)
     if a.reboot and not a.apply:
@@ -737,6 +767,12 @@ def run(args, connect=None):
     print("iLO %s  -  %s  -  CID rev 1.9" % (args.ilo, mode))
     fails, items = 0, []
     try:
+        if args.get:
+            for uri in args.get:
+                r = ilo.c.get(uri)
+                print("### GET %s -> HTTP %s" % (uri, r.status))
+                print(json.dumps(r.dict, indent=1, sort_keys=True))
+            return 0
         if args.dump_bios:
             dump_bios(ilo, args.dump_bios)
             return 0

@@ -277,23 +277,23 @@
    0
   ],
   [
-   "Intel Speed Select Technology - Performance Profile",
-   "",
+   "Intel(R) Speed Select Technology - Performance Profile",
+   "IntelSpeedSelectConfigLevel",
    "Base"
   ],
   [
-   "Dynamic Intel Speed Select Technology - Performance Profile",
-   "",
+   "Dynamic Intel(R) Speed Select Technology - Performance Profile",
+   "DynamicIntelSpeedSelectMode",
    "Enabled"
   ],
   [
-   "Intel Speed Select Technology - Base Frequency",
-   "",
+   "Intel(R) Speed Select Technology - Base Frequency",
+   "IntelPriorityBaseFreq",
    "Disabled"
   ],
   [
-   "Intel Speed Select Technology - Core Power",
-   "",
+   "Intel(R) Speed Select Technology - Core Power",
+   "IntelPriorityCorePower",
    "Disabled"
   ],
   [
@@ -312,8 +312,8 @@
    "Limited"
   ],
   [
-   "Intel TSX Support",
-   "ProcTsx",
+   "Intel(R) TSX Support",
+   "Tsx",
    "Enabled"
   ],
   [
@@ -325,11 +325,6 @@
    "Processor UUID Control",
    "",
    "Lock/Disable"
-  ],
-  [
-   "UMONITOR",
-   "",
-   "Disabled"
   ],
   [
    "Advanced Memory Protection",
@@ -357,9 +352,9 @@
    24
   ],
   [
-   "Node Interleaving",
-   "NodeInterleaving",
-   "Disabled"
+   "NUMA",
+   "Numa",
+   "Enabled"
   ],
   [
    "Virtual NUMA",
@@ -367,8 +362,8 @@
    "Disabled"
   ],
   [
-   "Memory Mirror Mode",
-   "",
+   "Memory Mirroring Mode",
+   "MemMirrorMode",
    "Full Mirror"
   ],
   [
@@ -502,8 +497,8 @@
    "Disabled"
   ],
   [
-   "iPXE Verification",
-   "",
+   "iPXE Script Verification",
+   "IpxeScriptVerification",
    "Disabled"
   ],
   [
@@ -612,14 +607,9 @@
    "Maximum"
   ],
   [
-   "Dynamic Loadline Switch",
-   "",
-   "Not Disable DLL Switch"
-  ],
-  [
-   "Uncore Frequency RAPL",
-   "",
-   "Enabled"
+   "Disable Dynamic Loadline Switch",
+   "DisableDynamicLoadlineSwitch",
+   "NotDisableDLLSwitch"
   ],
   [
    "Sub-NUMA Clustering",
@@ -638,16 +628,6 @@
   ],
   [
    "Stale A to S",
-   "",
-   "Disabled"
-  ],
-  [
-   "CPU C1 Auto Demotion",
-   "",
-   "Disabled"
-  ],
-  [
-   "CPU C1 Auto Undemotion",
    "",
    "Disabled"
   ],
@@ -772,8 +752,8 @@
    10
   ],
   [
-   "Redundant Power Supply Mode",
-   "RedundantPowerSupply",
+   "Redundant Power Supply Mode - System Domain",
+   "RedundantPowerSupplySystemDomain",
    "Balanced Mode"
   ],
   [
@@ -822,42 +802,12 @@
    "Auto"
   ],
   [
-   "Discover Shell Auto-Script using DHCP",
-   "",
+   "Discover Shell Auto-Start Script using DHCP",
+   "UefiShellStartupUrlFromDhcp",
    "Disabled"
   ],
   [
    "Microsoft(R) Secured-core Support",
-   "",
-   "Disabled"
-  ],
-  [
-   "Certificate validation for every TLS connection",
-   "",
-   "PEER"
-  ],
-  [
-   "Strict Hostname checking",
-   "",
-   "Disabled"
-  ],
-  [
-   "TLS Protocol Version Support",
-   "",
-   "Auto"
-  ],
-  [
-   "Prepare system for Transport",
-   "",
-   "Disabled"
-  ],
-  [
-   "Halt on Server Configuration Lock failure detection",
-   "",
-   "Disabled"
-  ],
-  [
-   "Key Management",
    "",
    "Disabled"
   ],
@@ -897,8 +847,8 @@
    "Disabled"
   ],
   [
-   "Allow login with iLO Accounts",
-   "",
+   "Allow login with iLO accounts",
+   "AllowLoginWithIlo",
    "Disabled"
   ],
   [
@@ -943,8 +893,103 @@
   ],
   [
    "SGX Package Info In-Band Access",
-   "",
+   "SgxPackageInfoInbandAccess",
    "Disabled"
+  ],
+  [
+   "PCIe Slot 1 Device Disable",
+   "PciSlot1Enable",
+   "Auto"
+  ],
+  [
+   "PCIe Slot 1 Link Speed",
+   "PciSlot1LinkSpeed",
+   "Auto"
+  ],
+  [
+   "PCIe Slot 1 ASPM",
+   "PciSlot1Aspm",
+   "Disabled"
+  ],
+  [
+   "PCIe Slot 1 Option ROM",
+   "PciSlot1OptionROM",
+   "Enabled"
+  ],
+  [
+   "PCIe Slot 2 Device Disable",
+   "PciSlot2Enable",
+   "Auto"
+  ],
+  [
+   "PCIe Slot 2 Link Speed",
+   "PciSlot2LinkSpeed",
+   "Auto"
+  ],
+  [
+   "PCIe Slot 2 ASPM",
+   "PciSlot2Aspm",
+   "Disabled"
+  ],
+  [
+   "PCIe Slot 2 Option ROM",
+   "PciSlot2OptionROM",
+   "Enabled"
+  ],
+  [
+   "PCIe Slot 5 Device Disable",
+   "PciSlot5Enable",
+   "Auto"
+  ],
+  [
+   "PCIe Slot 5 Link Speed",
+   "PciSlot5LinkSpeed",
+   "Auto"
+  ],
+  [
+   "PCIe Slot 5 ASPM",
+   "PciSlot5Aspm",
+   "Disabled"
+  ],
+  [
+   "PCIe Slot 5 Option ROM",
+   "PciSlot5OptionROM",
+   "Enabled"
+  ],
+  [
+   "Boot from URL 1",
+   "UrlBootFile",
+   ""
+  ],
+  [
+   "Boot from URL 2",
+   "UrlBootFile2",
+   ""
+  ],
+  [
+   "Boot from URL 3",
+   "UrlBootFile3",
+   ""
+  ],
+  [
+   "Boot from URL 4",
+   "UrlBootFile4",
+   ""
+  ],
+  [
+   "Pre-Boot Network Proxy",
+   "PrebootNetworkProxy",
+   ""
+  ],
+  [
+   "Network Location for iPXE Auto-Start Script",
+   "IpxeStartupUrl",
+   ""
+  ],
+  [
+   "Network Location for Shell Auto-Start Script",
+   "UefiShellStartupUrl",
+   ""
   ],
   [
    "NVMe PCIe Resource Padding",
@@ -1073,6 +1118,24 @@
   ]
  ],
  "bios_rules": [
+  {
+   "label": "PCIe bifurcation (all slots)",
+   "regex": "^PciSlot\\d+Bifurcation$",
+   "except": {},
+   "value": "NoBifurcation"
+  },
+  {
+   "label": "PCIe MCTP broadcast (all slots)",
+   "regex": "^Slot\\d+MctpBroadcastSupport$",
+   "except": {},
+   "value": "Enabled"
+  },
+  {
+   "label": "PCIe EOI broadcast (all slots)",
+   "regex": "^Slot\\d+EoiBroadcastSupport$",
+   "except": {},
+   "value": "Disabled"
+  },
   {
    "label": "PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1)",
    "regex": "^Slot\\d+NicBoot\\d+$",
@@ -1291,25 +1354,7 @@
         "CN=Intranet_MT_READ_ONLY_ALLOW,OU=corp,DC=bankofamerica,DC=com"
        ]
       }
-     },
-     "RemoteRoleMapping": [
-      {
-       "LocalRole": "Administrator",
-       "RemoteGroup": "CN=Intranet_SP_READ_WRITE_ALLOW,OU=corp,DC=bankofamerica,DC=com"
-      },
-      {
-       "LocalRole": "ReadOnly",
-       "RemoteGroup": "CN=Intranet_SP_READ_ALLOW,OU=corp,DC=bankofamerica,DC=com"
-      },
-      {
-       "LocalRole": "Administrator",
-       "RemoteGroup": "CN=CTIREMCON_E,OU=corp,DC=bankofamerica,DC=com"
-      },
-      {
-       "LocalRole": "ReadOnly",
-       "RemoteGroup": "CN=Intranet_MT_READ_ONLY_ALLOW,OU=corp,DC=bankofamerica,DC=com"
-      }
-     ]
+     }
     },
     "Oem": {
      "Hpe": {
@@ -1320,6 +1365,28 @@
      }
     }
    }
+  },
+  {
+   "type": "ldap_groups",
+   "name": "Directory groups (Group DN / permissions)",
+   "groups": [
+    {
+     "dn": "CN=Intranet_SP_READ_WRITE_ALLOW,OU=corp,DC=bankofamerica,DC=com",
+     "role": "Administrator"
+    },
+    {
+     "dn": "CN=Intranet_SP_READ_ALLOW,OU=corp,DC=bankofamerica,DC=com",
+     "role": "ReadOnly"
+    },
+    {
+     "dn": "CN=CTIREMCON_E,OU=corp,DC=bankofamerica,DC=com",
+     "role": "Administrator"
+    },
+    {
+     "dn": "CN=Intranet_MT_READ_ONLY_ALLOW,OU=corp,DC=bankofamerica,DC=com",
+     "role": "ReadOnly"
+    }
+   ]
   },
   {
    "name": "iLO access settings",
@@ -1384,8 +1451,9 @@
   }
  ],
  "manual_checklist": [
-  "BIOS: PCIe per-slot options (Slots 1, 2, 5: device disable / link speed / ASPM / option ROM), PCIe bifurcation, MCTP, EOI",
-  "BIOS: Boot from URL 1-4, proxy, iPXE script location, shell script location (leave blank)",
+  "BIOS: TLS (HTTPS) options - peer certificate validation, strict hostname checking, TLS version (not BIOS attributes on this firmware)",
+  "BIOS: Server Configuration Lock options (prepare for transport / halt on failure) and Device Encryption 'Key Management' - not in this BIOS registry; confirm in RBSU",
+  "BIOS: UMONITOR, CPU C1 auto (un)demotion, Uncore Frequency RAPL, Intel NIC/other items removed by CID 1.9 - do not exist on this BIOS",
   "BIOS: UEFI Boot Order Control (enable/disable per boot entry)",
   "BIOS: TLS cipher suite list (10 suites) - set via UEFI/RBSU or a HPE-specific attribute, not automated",
   "BIOS: Set Power On / Admin passwords - both blank, nothing to do",
