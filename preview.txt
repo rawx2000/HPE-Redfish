@@ -1,0 +1,231 @@
+iLO 10.254.2.162  -  PREVIEW (nothing will be changed)  -  CID rev 1.9
+Firmware inventory:
+   iLO 6                                                        1.68 Apr 24 2025
+   System ROM                                                   U54 v2.50 (04/22/2025)
+   Intelligent Platform Abstraction Data                        12.1.0 Build 43
+   System Programmable Logic Device                             0x12
+   Power Supply Firmware                                        2.00
+   Power Supply Firmware                                        2.00
+   Server Platform Services (SPS) Firmware                      6.1.4.89.0
+   Redundant System ROM                                         U54 v2.50 (04/22/2025)
+   Intelligent Provisioning                                     4.36.7
+   HPE Smart Storage Energy Pack 1 Firmware                     0.70
+   PCIe Riser 1 Programmable Logic Device                       10
+   PCIe Riser 2 Programmable Logic Device                       10
+   Processor 1 S3M Firmware                                     0x1E
+   Processor 1 PUcode Firmware                                  0x38000060
+   Processor 2 S3M Firmware                                     0x1E
+   Processor 2 PUcode Firmware                                  0x38000060
+   TPM Firmware                                                 0.0
+   Solarflare XtremeScale X2522-25G Adapter                     8.6.2.1000
+   Embedded Video Controller                                    2.5
+   HPE SR932i-p Gen11                                           03.01.33.044
+   HPE SR932i-p Gen11                                           03.01.33.044
+   960GB 64G NVMe SSD                                           HPK5
+   960GB 64G NVMe SSD                                           HPK5
+   3.2TB 64G NVMe SSD                                           HPK6
+   3.2TB 64G NVMe SSD                                           HPK6
+   8 SFF 24G x4NVMe/SAS UBM6 BC BP                              1.04
+   8 SFF 24G x4NVMe/SAS UBM6 BC BP                              1.04
+   8 SFF 24G x4NVMe/SAS UBM6 BC BP                              1.04
+   8 SFF 24G x4NVMe/SAS UBM6 BC BP                              1.04
+   8 SFF 24G x4NVMe/SAS UBM6 BC BP                              1.04
+   8 SFF 24G x4NVMe/SAS UBM6 BC BP                              1.04
+   8 SFF 24G x4NVMe/SAS UBM6 BC BP                              1.04
+   8 SFF 24G x4NVMe/SAS UBM6 BC BP                              1.04
+
+=== FIRMWARE ====================================================
+ [?] UNRESOLVED  System BIOS U54
+        System ROM: U54 v2.50 (04/22/2025)  -> needs 2.84_2026_04_02
+        Redundant System ROM: U54 v2.50 (04/22/2025)  -> needs 2.84_2026_04_02
+        ? 0 firmware packages in --firmware-dir match [['u54'], ['bios'], ['system rom']] (need exactly 1)
+ [?] UNRESOLVED  HPE SR932i-p Gen11 (slots 2 and 5)
+        HPE SR932i-p Gen11: 03.01.33.044  -> needs 03.01.44.040
+        HPE SR932i-p Gen11: 03.01.33.044  -> needs 03.01.44.040
+        ? 0 firmware packages in --firmware-dir match [['sr932']] (need exactly 1)
+ [?] UNRESOLVED  Server Platform Services (SPS) Firmware
+        Server Platform Services (SPS) Firmware: 6.1.4.89.0  -> needs 06.01.04.215.0
+        ? 0 firmware packages in --firmware-dir match [['sps'], ['server platform services']] (need exactly 1)
+ [=] OK          Solarflare XtremeScale X2522-25G Adapter
+ [-] SKIP        Mellanox Network Adapter
+        not present in firmware inventory (component not installed?)
+ [?] UNRESOLVED  8 SFF 24G x4NVMe/SAS UBM6 BC BP
+        8 SFF 24G x4NVMe/SAS UBM6 BC BP: 1.04  -> needs 1.06
+        8 SFF 24G x4NVMe/SAS UBM6 BC BP: 1.04  -> needs 1.06
+        8 SFF 24G x4NVMe/SAS UBM6 BC BP: 1.04  -> needs 1.06
+        8 SFF 24G x4NVMe/SAS UBM6 BC BP: 1.04  -> needs 1.06
+        8 SFF 24G x4NVMe/SAS UBM6 BC BP: 1.04  -> needs 1.06
+        8 SFF 24G x4NVMe/SAS UBM6 BC BP: 1.04  -> needs 1.06
+        8 SFF 24G x4NVMe/SAS UBM6 BC BP: 1.04  -> needs 1.06
+        8 SFF 24G x4NVMe/SAS UBM6 BC BP: 1.04  -> needs 1.06
+        ? 0 firmware packages in --firmware-dir match [['ubm6'], ['backplane']] (need exactly 1)
+ [?] UNRESOLVED  iLO6 Firmware
+        iLO 6: 1.68 Apr 24 2025  -> needs 1.76
+        ? 0 firmware packages in --firmware-dir match [['ilo6'], ['ilo 6'], ['ilo_6']] (need exactly 1)
+
+=== BIOS ========================================================
+ [~] CHANGE      BIOS attributes (2 to change)
+        ? Intel Speed Select Technology - Performance Profile: no attribute named 'Intel Speed Select Technology - Performance Profile' on this BIOS
+        ? Dynamic Intel Speed Select Technology - Performance Profile: no attribute named 'Dynamic Intel Speed Select Technology - Performance Profile' on this BIOS
+        ? Intel Speed Select Technology - Base Frequency: no attribute named 'Intel Speed Select Technology - Base Frequency' on this BIOS
+        ? Intel Speed Select Technology - Core Power: no attribute named 'Intel Speed Select Technology - Core Power' on this BIOS
+        ? Intel TSX Support: no attribute named 'Intel TSX Support' / ProcTsx on this BIOS
+        ? UMONITOR: no attribute named 'UMONITOR' on this BIOS
+        ? Node Interleaving: no attribute named 'Node Interleaving' / NodeInterleaving on this BIOS
+        ? Memory Mirror Mode: no attribute named 'Memory Mirror Mode' on this BIOS
+        ? iPXE Verification: no attribute named 'iPXE Verification' on this BIOS
+        Intel(R) VMD Direct Assign (IntelVmdDirectAssign): VmdDirectAssignEnabledAll -> Disabled
+        ? Dynamic Loadline Switch: no attribute named 'Dynamic Loadline Switch' on this BIOS
+        ? Uncore Frequency RAPL: no attribute named 'Uncore Frequency RAPL' on this BIOS
+        ? CPU C1 Auto Demotion: no attribute named 'CPU C1 Auto Demotion' on this BIOS
+        ? CPU C1 Auto Undemotion: no attribute named 'CPU C1 Auto Undemotion' on this BIOS
+        ? Redundant Power Supply Mode: no attribute named 'Redundant Power Supply Mode' / RedundantPowerSupply on this BIOS
+        ? Discover Shell Auto-Script using DHCP: no attribute named 'Discover Shell Auto-Script using DHCP' on this BIOS
+        ? Certificate validation for every TLS connection: no attribute named 'Certificate validation for every TLS connection' on this BIOS
+        ? Strict Hostname checking: no attribute named 'Strict Hostname checking' on this BIOS
+        ? TLS Protocol Version Support: no attribute named 'TLS Protocol Version Support' on this BIOS
+        ? Prepare system for Transport: no attribute named 'Prepare system for Transport' on this BIOS
+        ? Halt on Server Configuration Lock failure detection: no attribute named 'Halt on Server Configuration Lock failure detection' on this BIOS
+        ? Key Management: no attribute named 'Key Management' on this BIOS
+        ? Allow login with iLO Accounts: no attribute named 'Allow login with iLO Accounts' on this BIOS
+        - SGX Package Info In-Band Access (SgxPackageInfoInbandAccess): not exposed on this system/config
+        UEFI Serial Debug Message Level (UefiSerialDebugLevel): Disabled -> ErrorsOnly
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot10NicBoot1] (Slot10NicBoot1): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot10NicBoot2] (Slot10NicBoot2): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot10NicBoot3] (Slot10NicBoot3): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot10NicBoot4] (Slot10NicBoot4): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot10NicBoot5] (Slot10NicBoot5): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot10NicBoot6] (Slot10NicBoot6): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot10NicBoot7] (Slot10NicBoot7): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot10NicBoot8] (Slot10NicBoot8): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot14NicBoot1] (Slot14NicBoot1): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot14NicBoot2] (Slot14NicBoot2): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot14NicBoot3] (Slot14NicBoot3): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot14NicBoot4] (Slot14NicBoot4): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot14NicBoot5] (Slot14NicBoot5): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot14NicBoot6] (Slot14NicBoot6): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot14NicBoot7] (Slot14NicBoot7): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot14NicBoot8] (Slot14NicBoot8): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot15NicBoot1] (Slot15NicBoot1): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot15NicBoot2] (Slot15NicBoot2): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot15NicBoot3] (Slot15NicBoot3): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot15NicBoot4] (Slot15NicBoot4): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot15NicBoot5] (Slot15NicBoot5): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot15NicBoot6] (Slot15NicBoot6): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot15NicBoot7] (Slot15NicBoot7): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot15NicBoot8] (Slot15NicBoot8): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot1NicBoot3] (Slot1NicBoot3): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot1NicBoot4] (Slot1NicBoot4): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot1NicBoot5] (Slot1NicBoot5): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot1NicBoot6] (Slot1NicBoot6): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot1NicBoot7] (Slot1NicBoot7): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot1NicBoot8] (Slot1NicBoot8): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot2NicBoot1] (Slot2NicBoot1): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot2NicBoot2] (Slot2NicBoot2): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot2NicBoot3] (Slot2NicBoot3): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot2NicBoot4] (Slot2NicBoot4): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot2NicBoot5] (Slot2NicBoot5): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot2NicBoot6] (Slot2NicBoot6): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot2NicBoot7] (Slot2NicBoot7): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot2NicBoot8] (Slot2NicBoot8): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot3NicBoot1] (Slot3NicBoot1): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot3NicBoot2] (Slot3NicBoot2): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot3NicBoot3] (Slot3NicBoot3): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot3NicBoot4] (Slot3NicBoot4): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot3NicBoot5] (Slot3NicBoot5): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot3NicBoot6] (Slot3NicBoot6): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot3NicBoot7] (Slot3NicBoot7): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot3NicBoot8] (Slot3NicBoot8): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot4NicBoot1] (Slot4NicBoot1): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot4NicBoot2] (Slot4NicBoot2): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot4NicBoot3] (Slot4NicBoot3): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot4NicBoot4] (Slot4NicBoot4): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot4NicBoot5] (Slot4NicBoot5): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot4NicBoot6] (Slot4NicBoot6): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot4NicBoot7] (Slot4NicBoot7): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot4NicBoot8] (Slot4NicBoot8): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot5NicBoot1] (Slot5NicBoot1): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot5NicBoot2] (Slot5NicBoot2): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot5NicBoot3] (Slot5NicBoot3): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot5NicBoot4] (Slot5NicBoot4): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot5NicBoot5] (Slot5NicBoot5): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot5NicBoot6] (Slot5NicBoot6): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot5NicBoot7] (Slot5NicBoot7): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot5NicBoot8] (Slot5NicBoot8): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot6NicBoot1] (Slot6NicBoot1): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot6NicBoot2] (Slot6NicBoot2): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot6NicBoot3] (Slot6NicBoot3): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot6NicBoot4] (Slot6NicBoot4): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot6NicBoot5] (Slot6NicBoot5): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot6NicBoot6] (Slot6NicBoot6): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot6NicBoot7] (Slot6NicBoot7): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot6NicBoot8] (Slot6NicBoot8): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot7NicBoot1] (Slot7NicBoot1): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot7NicBoot2] (Slot7NicBoot2): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot7NicBoot3] (Slot7NicBoot3): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot7NicBoot4] (Slot7NicBoot4): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot8NicBoot1] (Slot8NicBoot1): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot8NicBoot2] (Slot8NicBoot2): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot8NicBoot3] (Slot8NicBoot3): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot8NicBoot4] (Slot8NicBoot4): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot9NicBoot1] (Slot9NicBoot1): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot9NicBoot2] (Slot9NicBoot2): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot9NicBoot3] (Slot9NicBoot3): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot9NicBoot4] (Slot9NicBoot4): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot9NicBoot5] (Slot9NicBoot5): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot9NicBoot6] (Slot9NicBoot6): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot9NicBoot7] (Slot9NicBoot7): not exposed on this system/config
+        - PCIe Slot Network Boot (all NIC ports except Slot 1 Port 1) [Slot9NicBoot8] (Slot9NicBoot8): not exposed on this system/config
+        (161 already compliant, 0 pending reboot)
+ [=] OK          Secure Boot disabled
+
+=== BOOT ========================================================
+ [=] OK          UEFI boot order
+
+=== ILO =========================================================
+ [~] CHANGE      Network protocols and ports
+        SSH/ProtocolEnabled: true -> false
+ [=] OK          SNTP time servers
+ [=] OK          iLO time zone
+ [=] OK          Dedicated network port
+ [=] OK          Remote syslog
+ [?] UNRESOLVED  SNMP settings and alert destinations
+        ? ColdStartTrapBroadcast: not present at /redfish/v1/Managers/1/SnmpService/ (property name differs on this firmware?)
+        ? PeriodicHSATrapConfiguration: not present at /redfish/v1/Managers/1/SnmpService/ (property name differs on this firmware?)
+ [?] UNRESOLVED  iLO Alertmail
+        resource ['alertmail'] not found on this iLO
+ [=] OK          Account service (lockout / passwords)
+ [~] CHANGE      Directory (generic LDAP) and group mapping
+        LDAP/RemoteRoleMapping: [{"LocalRole": "dirgroupb3d8954f6ebbe735764e9f7c", "RemoteGroup": "... -> [{"LocalRole": "Administrator", "RemoteGroup": "CN=Intranet_SP_READ...
+ [~] CHANGE      iLO access settings
+        Oem/Hpe/RequiredLoginForiLORBSU: true -> false
+ [?] UNRESOLVED  Login security banner
+        resource ['login_banner'] not found on this iLO
+ [=] OK          Update service
+ [=] OK          Local user mhsadmin
+ [=] OK          iLO licence key
+ [-] MANUAL      Dedicated NIC IPv4 (DHCPv4 disabled)
+        CID says DHCPv4 = Disabled but gives no address. Not changed - disabling DHCP without a static address would lock you out. Re-run with --ilo-static-ip/--ilo-netmask/--ilo-gateway.
+ [=] OK          iLO security state
+
+Summary: 12 ok, 4 change, 8 unresolved, 1 manual, 1 skip
+  31 setting(s) could not be mapped to this iLO/BIOS (marked '?') - fix names in the config JSON, or use --dump-bios.
+
+Not automated (check by hand / other tooling):
+  - BIOS: PCIe per-slot options (Slots 1, 2, 5: device disable / link speed / ASPM / option ROM), PCIe bifurcation, MCTP, EOI
+  - BIOS: Boot from URL 1-4, proxy, iPXE script location, shell script location (leave blank)
+  - BIOS: UEFI Boot Order Control (enable/disable per boot entry)
+  - BIOS: TLS cipher suite list (10 suites) - set via UEFI/RBSU or a HPE-specific attribute, not automated
+  - BIOS: Set Power On / Admin passwords - both blank, nothing to do
+  - iLO: Federation management and multicast discovery disabled
+  - iLO: Remote console computer lock, IRC trusted-certificate requirement, persistent mouse/keyboard
+  - iLO: Power capping unchecked, SNMP power-threshold alerts disabled
+  - iLO: Global Component Integrity / Component Integrity Policy, CAC/smartcard, Kerberos, two-factor, SSO trust mode
+  - iLO: Idle connection timeout 15 min, Service Port settings, 802.1X, web proxy, anonymous data, enhanced download performance
+  - iLO: SNMPv3 request/trap disabled, SNMPv1 request/trap enabled (included best-effort in SNMP item if names match)
+  - iLO: Default language = English
+  - SSL: confirm the iLO self-signed certificate is SHA-256 (regenerate via CSR/'Generate certificate' if not)
+  - Data Express identifier DEID: DEBOFA-C01 (no Redfish setting - record it in the build system)
+  - Hardware: RAID volumes per SKU (LLA / LLB / LLC), asset tag handling, PCIe card placement
+
+Preview only. 4 item(s) would change. Re-run with --apply to make these changes (add --reboot to restart afterwards).
