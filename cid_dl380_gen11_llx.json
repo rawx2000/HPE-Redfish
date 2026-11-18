@@ -1,4 +1,6 @@
 {
+ "_version": "1.9.1",
+ "_marker": "#1.1version",
  "_comment": "Generated from CID BOA DL380 Gen11 Sapphire Rapids LLx, revision 1.9. Edit freely; attribute names are best-effort - run the script in preview mode and fix anything flagged '?'.",
  "firmware": [
   {

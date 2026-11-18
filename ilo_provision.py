@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-
-#1
+#1.1version
 """
 ilo_provision.py - bring an HPE DL380 Gen11 (iLO 6) in line with the Customer Intent Document.
 
@@ -23,6 +22,7 @@ import time
 import zipfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+VERSION = "1.9.1"   # keep in step with "_version" in cid_dl380_gen11_llx.json
 
 
 def _import_redfish():
@@ -766,7 +766,7 @@ def run(args, connect=None):
     sections = {s.strip() for s in args.only.split(",")}
     params = {"SKU": args.sku}
     mode = "APPLY" if args.apply else "PREVIEW (nothing will be changed)"
-    print("iLO %s  -  %s  -  CID rev 1.9" % (args.ilo, mode))
+    print("iLO %s  -  %s  -  CID rev 1.9  -  script v%s, config v%s" % (args.ilo, mode, VERSION, cfg.get("_version", "?")))
     fails, items = 0, []
     try:
         if args.get:
