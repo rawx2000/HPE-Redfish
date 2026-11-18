@@ -1,0 +1,621 @@
+iLO 10.254.2.162  -  PREVIEW (nothing will be changed)  -  CID rev 1.9  -  script v1.9.1, config v1.9.1
+### GET /redfish/v1/Managers/1/ -> HTTP 200
+{
+ "@odata.context": "/redfish/v1/$metadata#Manager.Manager",
+ "@odata.etag": "W/\"50F572AD\"",
+ "@odata.id": "/redfish/v1/Managers/1/",
+ "@odata.type": "#Manager.v1_19_1.Manager",
+ "Actions": {
+  "#Manager.Reset": {
+   "ResetType@Redfish.AllowableValues": [
+    "ForceRestart",
+    "GracefulRestart"
+   ],
+   "target": "/redfish/v1/Managers/1/Actions/Manager.Reset/"
+  }
+ },
+ "CommandShell": {
+  "ConnectTypesSupported": [
+   "SSH",
+   "Oem"
+  ],
+  "MaxConcurrentSessions": 9,
+  "ServiceEnabled": true
+ },
+ "DateTime": "2026-11-18T08:29:23Z",
+ "DateTimeLocalOffset": "+00:00",
+ "DedicatedNetworkPorts": {
+  "@odata.id": "/redfish/v1/Managers/1/DedicatedNetworkPorts/"
+ },
+ "EthernetInterfaces": {
+  "@odata.id": "/redfish/v1/Managers/1/EthernetInterfaces/"
+ },
+ "FirmwareVersion": "iLO 6 v1.68",
+ "GraphicalConsole": {
+  "ConnectTypesSupported": [
+   "KVMIP"
+  ],
+  "MaxConcurrentSessions": 10,
+  "ServiceEnabled": true
+ },
+ "HostInterfaces": {
+  "@odata.id": "/redfish/v1/Managers/1/HostInterfaces/"
+ },
+ "Id": "1",
+ "Links": {
+  "ManagerForChassis": [
+   {
+    "@odata.id": "/redfish/v1/Chassis/1/"
+   }
+  ],
+  "ManagerForServers": [
+   {
+    "@odata.id": "/redfish/v1/Systems/1/"
+   }
+  ],
+  "ManagerInChassis": {
+   "@odata.id": "/redfish/v1/Chassis/1/"
+  }
+ },
+ "LogServices": {
+  "@odata.id": "/redfish/v1/Managers/1/LogServices/"
+ },
+ "ManagerType": "BMC",
+ "Model": "iLO 6",
+ "Name": "Manager",
+ "NetworkProtocol": {
+  "@odata.id": "/redfish/v1/Managers/1/NetworkProtocol/"
+ },
+ "Oem": {
+  "Hpe": {
+   "@odata.context": "/redfish/v1/$metadata#HpeiLO.HpeiLO",
+   "@odata.type": "#HpeiLO.v2_16_1.HpeiLO",
+   "Actions": {
+    "#HpeiLO.ClearHotKeys": {
+     "target": "/redfish/v1/Managers/1/Actions/Oem/Hpe/HpeiLO.ClearHotKeys/"
+    },
+    "#HpeiLO.ClearNVRAM": {
+     "target": "/redfish/v1/Managers/1/Actions/Oem/Hpe/HpeiLO.ClearNVRAM/"
+    },
+    "#HpeiLO.ClearRestApiState": {
+     "target": "/redfish/v1/Managers/1/Actions/Oem/Hpe/HpeiLO.ClearRestApiState/"
+    },
+    "#HpeiLO.DisableCloudConnect": {
+     "target": "/redfish/v1/Managers/1/Actions/Oem/Hpe/HpeiLO.DisableCloudConnect/"
+    },
+    "#HpeiLO.DisableiLOFunctionality": {
+     "target": "/redfish/v1/Managers/1/Actions/Oem/Hpe/HpeiLO.DisableiLOFunctionality/"
+    },
+    "#HpeiLO.EnableCloudConnect": {
+     "target": "/redfish/v1/Managers/1/Actions/Oem/Hpe/HpeiLO.EnableCloudConnect/"
+    },
+    "#HpeiLO.RequestFirmwareAndOsRecovery": {
+     "target": "/redfish/v1/Managers/1/Actions/Oem/Hpe/HpeiLO.RequestFirmwareAndOsRecovery/"
+    },
+    "#HpeiLO.ResetToFactoryDefaults": {
+     "ResetType@Redfish.AllowableValues": [
+      "Default"
+     ],
+     "target": "/redfish/v1/Managers/1/Actions/Oem/Hpe/HpeiLO.ResetToFactoryDefaults/"
+    },
+    "#HpeiLO.RetryCloudConnect": {
+     "target": "/redfish/v1/Managers/1/Actions/Oem/Hpe/HpeiLO.RetryCloudConnect/"
+    }
+   },
+   "ClearRestApiStatus": "DataPresent",
+   "CloudConnect": {
+    "CloudConnectStatus": "NotEnabled",
+    "ConnectionType": "Direct",
+    "ExtendedStatusInfo": {
+     "NetworkConfig": "NotTested",
+     "WebConnectivity": "NotTested",
+     "iLOConfigForCloudConnect": "NotTested"
+    },
+    "FailReason": "NotTested",
+    "InsightInfo": {
+     "TextEn": "",
+     "TextJa": "",
+     "TextZh": ""
+    },
+    "WorkspaceId": ""
+   },
+   "ConfigurationLimitations": "None",
+   "ConfigurationSettings": "Current",
+   "FederationConfig": {
+    "IPv6MulticastScope": "Site",
+    "MulticastAnnouncementInterval": 600,
+    "MulticastDiscovery": "Disabled",
+    "MulticastTimeToLive": 5,
+    "iLOFederationManagement": "Disabled"
+   },
+   "Firmware": {
+    "Current": {
+     "Date": "Apr 24 2025",
+     "DebugBuild": false,
+     "MajorVersion": 1,
+     "MinorVersion": 68,
+     "VersionString": "iLO 6 v1.68"
+    }
+   },
+   "ForceOnDriveLED": false,
+   "FrontPanelUSB": {
+    "State": "Ready"
+   },
+   "IdleConnectionTimeoutMinutes": 15,
+   "IntegratedRemoteConsole": {
+    "HotKeys": [
+     {
+      "KeySequence": [
+       "NONE",
+       "NONE",
+       "NONE",
+       "NONE",
+       "NONE"
+      ],
+      "Name": "Ctrl-T"
+     },
+     {
+      "KeySequence": [
+       "NONE",
+       "NONE",
+       "NONE",
+       "NONE",
+       "NONE"
+      ],
+      "Name": "Ctrl-U"
+     },
+     {
+      "KeySequence": [
+       "NONE",
+       "NONE",
+       "NONE",
+       "NONE",
+       "NONE"
+      ],
+      "Name": "Ctrl-V"
+     },
+     {
+      "KeySequence": [
+       "NONE",
+       "NONE",
+       "NONE",
+       "NONE",
+       "NONE"
+      ],
+      "Name": "Ctrl-W"
+     },
+     {
+      "KeySequence": [
+       "NONE",
+       "NONE",
+       "NONE",
+       "NONE",
+       "NONE"
+      ],
+      "Name": "Ctrl-X"
+     },
+     {
+      "KeySequence": [
+       "NONE",
+       "NONE",
+       "NONE",
+       "NONE",
+       "NONE"
+      ],
+      "Name": "Ctrl-Y"
+     }
+    ],
+    "LockKey": {
+     "CustomKeySequence": [
+      "NONE",
+      "NONE",
+      "NONE",
+      "NONE",
+      "NONE"
+     ],
+     "LockOption": "Disabled"
+    },
+    "TrustedCertificateRequired": false
+   },
+   "License": {
+    "LicenseKey": "XXXXX-XXXXX-XXXXX-XXXXX-XB9YW",
+    "LicenseString": "iLO Advanced",
+    "LicenseType": "Perpetual"
+   },
+   "Links": {
+    "ActiveHealthSystem": {
+     "@odata.id": "/redfish/v1/Managers/1/ActiveHealthSystem/"
+    },
+    "BackupRestoreService": {
+     "@odata.id": "/redfish/v1/Managers/1/BackupRestoreService/"
+    },
+    "DateTimeService": {
+     "@odata.id": "/redfish/v1/Managers/1/DateTime/"
+    },
+    "EmbeddedMediaService": {
+     "@odata.id": "/redfish/v1/Managers/1/EmbeddedMedia/"
+    },
+    "FederationDispatch": {
+     "extref": "/dispatch"
+    },
+    "FederationGroups": {
+     "@odata.id": "/redfish/v1/Managers/1/FederationGroups/"
+    },
+    "FederationPeers": {
+     "@odata.id": "/redfish/v1/Managers/1/FederationPeers/"
+    },
+    "GUIService": {
+     "@odata.id": "/redfish/v1/Managers/1/GUIService/"
+    },
+    "LicenseService": {
+     "@odata.id": "/redfish/v1/Managers/1/LicenseService/"
+    },
+    "RemoteSupport": {
+     "@odata.id": "/redfish/v1/Managers/1/RemoteSupportService/"
+    },
+    "SNMPService": {
+     "@odata.id": "/redfish/v1/Managers/1/SnmpService/"
+    },
+    "SecurityService": {
+     "@odata.id": "/redfish/v1/Managers/1/SecurityService/"
+    },
+    "Thumbnail": {
+     "extref": "/images/thumbnail.bmp"
+    },
+    "VSPLogLocation": {
+     "extref": "/sol.log.gz"
+    }
+   },
+   "PersistentMouseKeyboardEnabled": false,
+   "PhysicalMonitorHealthStatusEnabled": true,
+   "RIBCLEnabled": true,
+   "RemoteConsoleThumbnailEnabled": true,
+   "RequireHostAuthentication": false,
+   "RequiredLoginForiLORBSU": true,
+   "SerialCLISpeed": 9600,
+   "SerialCLIStatus": "Disabled",
+   "SerialCLIUART": "Present",
+   "VSPDlLoggingEnabled": false,
+   "VSPLogDownloadEnabled": false,
+   "VideoPresenceDetectOverride": true,
+   "VideoPresenceDetectOverrideSupported": true,
+   "VirtualNICEnabled": false,
+   "WebGuiEnabled": true,
+   "iLOCPLDSpecVersion": "0xc",
+   "iLOFunctionalityEnabled": true,
+   "iLOFunctionalityRequired": false,
+   "iLOIPduringPOSTEnabled": true,
+   "iLORBSUEnabled": true,
+   "iLOSelfTestResults": [
+    {
+     "Notes": "",
+     "SelfTestName": "NVRAMData",
+     "Status": "OK"
+    },
+    {
+     "Notes": "Controller firmware revision  2.11.00  ",
+     "SelfTestName": "EmbeddedFlash",
+     "Status": "OK"
+    },
+    {
+     "Notes": "",
+     "SelfTestName": "HostRom",
+     "Status": "OK"
+    },
+    {
+     "Notes": "",
+     "SelfTestName": "SupportedHost",
+     "Status": "OK"
+    },
+    {
+     "Notes": "Device TA OK",
+     "SelfTestName": "SecureElement",
+     "Status": "OK"
+    },
+    {
+     "Notes": "ProLiant DL380 Gen11 System Programmable Logic Device 0x12",
+     "SelfTestName": "CPLDPAL0",
+     "Status": "Informational"
+    },
+    {
+     "Notes": "",
+     "SelfTestName": "ASICFuses",
+     "Status": "OK"
+    }
+   ],
+   "iLOServicePort": {
+    "MassStorageAuthenticationRequired": false,
+    "USBEthernetAdaptersEnabled": true,
+    "USBFlashDriveEnabled": true,
+    "iLOServicePortEnabled": true
+   }
+  }
+ },
+ "SerialConsole": {
+  "ConnectTypesSupported": [
+   "SSH",
+   "IPMI",
+   "Oem"
+  ],
+  "MaxConcurrentSessions": 13,
+  "ServiceEnabled": false
+ },
+ "SerialInterfaces": {
+  "@odata.id": "/redfish/v1/Managers/1/SerialInterfaces/"
+ },
+ "Status": {
+  "Health": "OK",
+  "State": "Enabled"
+ },
+ "UUID": "96ef6b56-4807-5c8d-a66c-28e9f2e635bb",
+ "VirtualMedia": {
+  "@odata.id": "/redfish/v1/Managers/1/VirtualMedia/"
+ }
+}
+### GET /redfish/v1/Managers/1/SnmpService/ -> HTTP 200
+{
+ "@odata.context": "/redfish/v1/$metadata#HpeiLOSnmpService.HpeiLOSnmpService",
+ "@odata.etag": "W/\"F26432D7\"",
+ "@odata.id": "/redfish/v1/Managers/1/SnmpService/",
+ "@odata.type": "#HpeiLOSnmpService.v2_4_1.HpeiLOSnmpService",
+ "Actions": {
+  "#HpeiLOSnmpService.SendSNMPTestAlert": {
+   "target": "/redfish/v1/Managers/1/SnmpService/Actions/HpeiLOSnmpService.SendSNMPTestAlert/"
+  }
+ },
+ "AlertDestinationAssociations": [
+  {
+   "SNMPAlertProtocol": "SNMPv1Trap",
+   "SecurityName": null
+  },
+  {
+   "SNMPAlertProtocol": "SNMPv1Trap",
+   "SecurityName": null
+  },
+  {
+   "SNMPAlertProtocol": null,
+   "SecurityName": null
+  },
+  {
+   "SNMPAlertProtocol": null,
+   "SecurityName": null
+  },
+  {
+   "SNMPAlertProtocol": null,
+   "SecurityName": null
+  },
+  {
+   "SNMPAlertProtocol": null,
+   "SecurityName": null
+  },
+  {
+   "SNMPAlertProtocol": null,
+   "SecurityName": null
+  },
+  {
+   "SNMPAlertProtocol": null,
+   "SecurityName": null
+  }
+ ],
+ "AlertDestinations": [
+  "snmptrap01pri.bankofamerica.com",
+  "snmptrap01bac.bankofamerica.com",
+  null,
+  null,
+  null,
+  null,
+  null,
+  null
+ ],
+ "AlertsEnabled": true,
+ "Contact": "",
+ "Description": "SNMP Service Status",
+ "Id": "SnmpService",
+ "Location": "",
+ "Name": "SNMP Service",
+ "Oem": {
+  "Hpe": {
+   "@odata.context": "/redfish/v1/$metadata#HpeiLOSnmpServiceExt.HpeiLOSnmpServiceExt",
+   "@odata.type": "#HpeiLOSnmpServiceExt.v2_0_0.HpeiLOSnmpServiceExt",
+   "SNMPColdStartTrapBroadcast": false
+  }
+ },
+ "PeriodicHSATrapConfig": "Disabled",
+ "ReadCommunities": [
+  "baread",
+  "",
+  ""
+ ],
+ "Role": "LLA",
+ "RoleDetail": "",
+ "SNMPAlertDestinations": {
+  "@odata.id": "/redfish/v1/Managers/1/SnmpService/SNMPAlertDestinations/"
+ },
+ "SNMPUsers": {
+  "@odata.id": "/redfish/v1/Managers/1/SnmpService/SNMPUsers/"
+ },
+ "SNMPv1Enabled": true,
+ "SNMPv1RequestsEnabled": true,
+ "SNMPv1TrapEnabled": true,
+ "SNMPv3EngineID": "0x800000E8045347484435364D353530",
+ "SNMPv3InformRetryAttempt": 2,
+ "SNMPv3InformRetryIntervalSeconds": 15,
+ "SNMPv3RequestsEnabled": false,
+ "SNMPv3TrapEnabled": false,
+ "Status": {
+  "State": "Enabled"
+ },
+ "TrapCommunities": [
+  "baread",
+  "baread",
+  "",
+  "",
+  "",
+  "",
+  "",
+  ""
+ ],
+ "TrapSourceHostname": "System",
+ "Users": [
+  {
+   "AuthProtocol": "MD5",
+   "PrivacyProtocol": "AES",
+   "SecurityName": "",
+   "UserEngineID": null
+  },
+  {
+   "AuthProtocol": "MD5",
+   "PrivacyProtocol": "AES",
+   "SecurityName": "",
+   "UserEngineID": null
+  },
+  {
+   "AuthProtocol": "MD5",
+   "PrivacyProtocol": "AES",
+   "SecurityName": "",
+   "UserEngineID": null
+  },
+  {
+   "AuthProtocol": "MD5",
+   "PrivacyProtocol": "AES",
+   "SecurityName": "",
+   "UserEngineID": null
+  },
+  {
+   "AuthProtocol": "MD5",
+   "PrivacyProtocol": "AES",
+   "SecurityName": "",
+   "UserEngineID": null
+  },
+  {
+   "AuthProtocol": "MD5",
+   "PrivacyProtocol": "AES",
+   "SecurityName": "",
+   "UserEngineID": null
+  },
+  {
+   "AuthProtocol": "MD5",
+   "PrivacyProtocol": "AES",
+   "SecurityName": "",
+   "UserEngineID": null
+  },
+  {
+   "AuthProtocol": "MD5",
+   "PrivacyProtocol": "AES",
+   "SecurityName": "",
+   "UserEngineID": null
+  }
+ ]
+}
+### GET /redfish/v1/Managers/1/SecurityService -> HTTP 200
+{
+ "@odata.context": "/redfish/v1/$metadata#HpeSecurityService.HpeSecurityService",
+ "@odata.etag": "W/\"D278444B\"",
+ "@odata.id": "/redfish/v1/Managers/1/SecurityService",
+ "@odata.type": "#HpeSecurityService.v2_6_0.HpeSecurityService",
+ "Actions": {},
+ "BMCHPELDevID": {
+  "Certificates": {
+   "@odata.id": "/redfish/v1/Managers/1/SecurityService/BMCHPELDevID/Certificates"
+  }
+ },
+ "BMCIAK": {
+  "Certificates": {
+   "@odata.id": "/redfish/v1/Managers/1/SecurityService/BMCIAK/Certificates"
+  }
+ },
+ "BMCIDevIDPca": {
+  "Certificates": {
+   "@odata.id": "/redfish/v1/Managers/1/SecurityService/BMCIDevIDPca/Certificates"
+  }
+ },
+ "BMCLAK": {
+  "Certificates": {
+   "@odata.id": "/redfish/v1/Managers/1/SecurityService/BMCLAK/Certificates"
+  }
+ },
+ "ComponentIntegrityPolicy": "NoPolicy",
+ "CurrentCipher": "TLS_AES_256_GCM_SHA384",
+ "DisableWeakCiphers": true,
+ "GlobalComponentIntegrity": "Disabled",
+ "Id": "SecurityService",
+ "Links": {
+  "AutomaticCertificateEnrollment": {
+   "@odata.id": "/redfish/v1/Managers/1/SecurityService/AutomaticCertificateEnrollment"
+  },
+  "CertAuth": {
+   "@odata.id": "/redfish/v1/Managers/1/SecurityService/CertificateAuthentication"
+  },
+  "ESKM": {
+   "@odata.id": "/redfish/v1/Managers/1/SecurityService/ESKM"
+  },
+  "HttpsCert": {
+   "@odata.id": "/redfish/v1/Managers/1/SecurityService/HttpsCert"
+  },
+  "SSO": {
+   "@odata.id": "/redfish/v1/Managers/1/SecurityService/SSO"
+  },
+  "SecurityDashboard": {
+   "@odata.id": "/redfish/v1/Managers/1/SecurityService/SecurityDashboard"
+  }
+ },
+ "LoginSecurityBanner": {
+  "IsEnabled": true,
+  "SecurityMessage": "This is a private computer system with access restricted to those with proper authorization. If you are not specifically authorized to access data on this system, disconnect now. All information and communications on this system are subject to review, monitoring, and recording at any time without notice or permission. Unauthorized use or access may be subject to prosecution or disciplinary action."
+ },
+ "OpenBMCTransferOfOwnership": "Supported",
+ "OpenBMCTransferStatus": "NotPerformed",
+ "PlatformCert": {
+  "Certificates": {
+   "@odata.id": "/redfish/v1/Managers/1/SecurityService/PlatformCert/Certificates"
+  }
+ },
+ "PlatformCertUpdate": {
+  "Certificates": {
+   "@odata.id": "/redfish/v1/Managers/1/SecurityService/PlatformCertUpdate/Certificates"
+  }
+ },
+ "SSHHostKey": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtO/MMfLHCKefjvFtYo7KiRJeQlN7ewyEGL3LzndSnWPZyGv1yyqymqP983Orw66arT/A4s/FsbPIpQ39arJ7nhWy9Yi9kdyt2P9EuaemBLXZqrR+lBlju+4Z5oqN/uHhMfMNaPuIYP2sWntvA3atEkXVTUd8Jevx7nbUTOSjqBxqyYGaxGvtR2CD0yqvK21liD0ucrsf1XSmVr7rn9Ce9N/wLR3le9CPJwfJ/A1PAXAhtLu/xl3vEDOJarSugtnq3HYLBmwdi5Df09hJ2mqBs6EgUnipTkryP/ODlPfF3x+gIeeDU9KckjawMh5ncKVQGZYp9rEALmHAhW/00hcud",
+ "SecurityState": "HighSecurity",
+ "SecurityState@Redfish.AllowableValues": [
+  "Production",
+  "HighSecurity",
+  "FIPS"
+ ],
+ "SystemIAK": {
+  "Certificates": {
+   "@odata.id": "/redfish/v1/Managers/1/SecurityService/SystemIAK/Certificates"
+  }
+ },
+ "SystemIDevID": {
+  "Certificates": {
+   "@odata.id": "/redfish/v1/Managers/1/SecurityService/SystemIDevID/Certificates"
+  }
+ },
+ "SystemLAKCert": {
+  "Certificates": {
+   "@odata.id": "/redfish/v1/Managers/1/SecurityService/SystemLAK/Certificates"
+  }
+ },
+ "SystemLDevID": {
+  "Certificates": {
+   "@odata.id": "/redfish/v1/Managers/1/SecurityService/SystemLDevID/Certificates"
+  }
+ },
+ "TLSVersion": {
+  "TLS1_0": "Disabled",
+  "TLS1_1": "Disabled",
+  "TLS1_2": "Enabled",
+  "TLS1_3": "Enabled"
+ },
+ "iLOIDevID": {
+  "Certificates": {
+   "@odata.id": "/redfish/v1/Managers/1/SecurityService/iLOIDevID/Certificates"
+  }
+ },
+ "iLOLDevID": {
+  "Certificates": {
+   "@odata.id": "/redfish/v1/Managers/1/SecurityService/iLOLDevID/Certificates"
+  }
+ }
+}
