@@ -1441,10 +1441,6 @@
    "key": "3G5CN-5NWLG-T8S89-CMKRZ-XB9YW"
   },
   {
-   "type": "static_ip",
-   "name": "Dedicated NIC IPv4 (DHCPv4 disabled)"
-  },
-  {
    "type": "security_state",
    "name": "iLO security state",
    "value": "HighSecurity"
