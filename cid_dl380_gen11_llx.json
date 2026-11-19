@@ -1,5 +1,5 @@
 {
- "_version": "1.9.1",
+ "_version": "1.9.2",
  "_marker": "#1.1version",
  "_comment": "Generated from CID BOA DL380 Gen11 Sapphire Rapids LLx, revision 1.9. Edit freely; attribute names are best-effort - run the script in preview mode and fix anything flagged '?'.",
  "firmware": [
@@ -1300,23 +1300,27 @@
     "ReadCommunities": [
      "baread"
     ],
+    "TrapCommunities": [
+     "baread",
+     "baread"
+    ],
     "TrapSourceHostname": "System",
     "AlertsEnabled": true,
     "AlertDestinations": [
      "snmptrap01pri.bankofamerica.com",
      "snmptrap01bac.bankofamerica.com"
     ],
-    "ColdStartTrapBroadcast": false,
-    "PeriodicHSATrapConfiguration": "Disabled"
-   }
-  },
-  {
-   "name": "iLO Alertmail",
-   "resources": [
-    "alertmail"
-   ],
-   "body": {
-    "AlertMailEnabled": false
+    "SNMPv1Enabled": true,
+    "SNMPv1RequestsEnabled": true,
+    "SNMPv1TrapEnabled": true,
+    "SNMPv3RequestsEnabled": false,
+    "SNMPv3TrapEnabled": false,
+    "PeriodicHSATrapConfig": "Disabled",
+    "Oem": {
+     "Hpe": {
+      "SNMPColdStartTrapBroadcast": false
+     }
+    }
    }
   },
   {
@@ -1402,19 +1406,50 @@
       "RequiredLoginForiLORBSU": false,
       "SerialCLISpeed": 9600,
       "SerialCLIStatus": "Disabled",
-      "VirtualNICEnabled": false
+      "VirtualNICEnabled": false,
+      "IdleConnectionTimeoutMinutes": 15,
+      "RIBCLEnabled": true,
+      "iLORBSUEnabled": true,
+      "WebGuiEnabled": true,
+      "RemoteConsoleThumbnailEnabled": true,
+      "iLOIPduringPOSTEnabled": true,
+      "PhysicalMonitorHealthStatusEnabled": true,
+      "VideoPresenceDetectOverride": true,
+      "VSPDlLoggingEnabled": false,
+      "VSPLogDownloadEnabled": false,
+      "PersistentMouseKeyboardEnabled": false,
+      "FederationConfig": {
+       "iLOFederationManagement": "Disabled",
+       "MulticastDiscovery": "Disabled"
+      },
+      "IntegratedRemoteConsole": {
+       "TrustedCertificateRequired": false,
+       "LockKey": {
+        "LockOption": "Disabled"
+       }
+      },
+      "iLOServicePort": {
+       "iLOServicePortEnabled": true,
+       "USBFlashDriveEnabled": true,
+       "MassStorageAuthenticationRequired": false,
+       "USBEthernetAdaptersEnabled": true
+      }
      }
     }
    }
   },
   {
-   "name": "Login security banner",
+   "name": "Security service (login banner, component integrity)",
    "resources": [
-    "login_banner"
+    "security_service"
    ],
    "body": {
-    "IsEnabled": true,
-    "SecurityMessage": "This is a private computer system with access restricted to those with proper authorization. If you are not specifically authorized to access data on this system, disconnect now. All information and communications on this system are subject to review, monitoring, and recording at any time without notice or permission. Unauthorized use or access may be subject to prosecution or disciplinary action."
+    "LoginSecurityBanner": {
+     "IsEnabled": true,
+     "SecurityMessage": "This is a private computer system with access restricted to those with proper authorization. If you are not specifically authorized to access data on this system, disconnect now. All information and communications on this system are subject to review, monitoring, and recording at any time without notice or permission. Unauthorized use or access may be subject to prosecution or disciplinary action."
+    },
+    "GlobalComponentIntegrity": "Disabled",
+    "ComponentIntegrityPolicy": "NoPolicy"
    }
   },
   {
@@ -1455,12 +1490,10 @@
   "BIOS: UEFI Boot Order Control (enable/disable per boot entry)",
   "BIOS: TLS cipher suite list (10 suites) - set via UEFI/RBSU or a HPE-specific attribute, not automated",
   "BIOS: Set Power On / Admin passwords - both blank, nothing to do",
-  "iLO: Federation management and multicast discovery disabled",
-  "iLO: Remote console computer lock, IRC trusted-certificate requirement, persistent mouse/keyboard",
+  "iLO: Alertmail disabled - no Alertmail service is exposed by iLO 6 v1.68 over Redfish; confirm in the iLO UI (Management > Alertmail)",
   "iLO: Power capping unchecked, SNMP power-threshold alerts disabled",
-  "iLO: Global Component Integrity / Component Integrity Policy, CAC/smartcard, Kerberos, two-factor, SSO trust mode",
-  "iLO: Idle connection timeout 15 min, Service Port settings, 802.1X, web proxy, anonymous data, enhanced download performance",
-  "iLO: SNMPv3 request/trap disabled, SNMPv1 request/trap enabled (included best-effort in SNMP item if names match)",
+  "iLO: CAC/smartcard, Kerberos, two-factor, SSO trust mode, 802.1X, web proxy, anonymous data, enhanced download performance",
+  "iLO: IPMI over KCS, Virtual Serial Port log over CLI, Web server non-SSL port enabled (port 80 is set; confirm the UI flag)",
   "iLO: Default language = English",
   "SSL: confirm the iLO self-signed certificate is SHA-256 (regenerate via CSR/'Generate certificate' if not)",
   "Data Express identifier DEID: DEBOFA-C01 (no Redfish setting - record it in the build system)",

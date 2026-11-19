@@ -22,7 +22,7 @@ import time
 import zipfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-VERSION = "1.9.1"   # keep in step with "_version" in cid_dl380_gen11_llx.json
+VERSION = "1.9.2"   # keep in step with "_version" in cid_dl380_gen11_llx.json
 
 
 def _import_redfish():
